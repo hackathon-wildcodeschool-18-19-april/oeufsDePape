@@ -1,20 +1,12 @@
 import React, { Component } from 'react';
-import logo from './OeufsDePape.jpg'
+import Homepage from './OeufsDePape.jpg'
 import axios from "axios";
 import Fetch from "./Fetch"
+import { Container, Row, Col } from 'reactstrap';
+import './App.css';
 
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <img src={logo} alt='Oeufs de Pape'style={{width:'100%'}}/>
-//       </div>
-//     );
-//   }
-// }
-
-class Card extends React.Component {
+export default class Card extends React.Component {
   constructor(props) {
       super(props)
       this.state = {
@@ -66,28 +58,51 @@ class Card extends React.Component {
   };
   
 
-  render(){
-    return (
-<>
-      
-      <div>
-    
-      
-      <Fetch />
-      <Fetch />
-      <Fetch />
-      <Fetch />
-      <Fetch />
-      <Fetch />
-      <Fetch />
-      <Fetch />
-      <Fetch />
-      
 
-        </div>
-        </>
+    render() {
+      return (
+<>
+<img src={Homepage} alt='Oeufs de Pape'style={{width:'100%'}}/>
+        <Container>
+
+        <Row>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+        </Row>
+        <Row>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+        </Row>
+        <Row>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+        </Row>
+        <Row>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+          <Col><Fetch /></Col>
+        </Row>
+  
+      </Container>
+</>
+      
     )
   }
 }
 
-export default Card;
+
